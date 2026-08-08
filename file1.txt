@@ -1,7 +1,3 @@
 Production version
-Prouction version
-=======
-Production version
->>>>>>> conflict-test
 Learning Git commands
 Login feature development

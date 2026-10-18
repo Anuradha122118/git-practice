@@ -1,4 +1,5 @@
 
+      
 name: Hello World
 
 on:
@@ -7,9 +8,24 @@ on:
       - main
 
 jobs:
-  hello:
+  hello-world:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print message
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print Hello World
         run: echo "Hello World from GitHub Actions!"
-      
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pytest
+        run: pip install pytest
+
+      - name: Run Pytest
+        run: pytest -v
+
